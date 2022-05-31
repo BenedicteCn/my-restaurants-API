@@ -40,7 +40,7 @@ router.get('/:name/', (request, response, next) => {
 router.get('/:category/', (request, response, next) => {
   const category = request.params.category
 
-  const restaurant = restaurants.find((x) => x.category === category)
+  const restaurant = restaurants.filter((x) => x.category === category)
 
   if (!restaurant) {
     next()
@@ -56,7 +56,7 @@ router.get('/:category/', (request, response, next) => {
 router.get('/:type_of_food/', (request, response, next) => {
   const type_of_food = request.params.type_of_food
 
-  const restaurant = restaurants.find((x) => x.type_of_food === type_of_food)
+  const restaurant = restaurants.filter((x) => x.type_of_food === type_of_food)
 
   if (!restaurant) {
     next()
