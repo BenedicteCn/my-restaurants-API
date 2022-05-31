@@ -18,8 +18,8 @@ app.use('/category', restaurantsRouter)
 app.use('/type_of_food', restaurantsRouter)
 
 
-// const addErrorHandling = require('./error-handling.js')
-// addErrorHandling(app)
+const addErrorHandling = require('./error-handling.js')
+addErrorHandling(app)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
